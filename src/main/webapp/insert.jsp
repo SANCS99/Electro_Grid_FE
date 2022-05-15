@@ -71,7 +71,7 @@
 	                    <h1>Consumption Register</h1>
 	                    <br><br><br>
 	                    
-	                        <form id="userRegister">
+	                        <form id="consumptionRegister">
 	                            <div>
 	                                <label>ID</label>
 	                                <div>
@@ -160,7 +160,7 @@
 
 $(document).ready(function () {
 
-    $("#userRegister").validate({
+    $("#consumptionRegister").validate({
         rules: {
         	id: "required",
         	meter_box_id: "required",
@@ -208,7 +208,7 @@ $(document).ready(function () {
                 	console.log(data);
                 	if(data['success']=="Done"){
                 		alert("Added Successfull!");
-                        $("#userRegister")[0].reset();
+                        $("#consumptionRegister")[0].reset();
 					}else{
 						alert("Unsuccessfull!");
 					}
@@ -220,7 +220,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#userRegister").submit(function(e) {
+    $("#consumptionRegister").submit(function(e) {
         e.preventDefault();
     });
 

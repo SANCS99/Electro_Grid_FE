@@ -84,7 +84,7 @@ div {
 <div id="hideDiv" style="display: none">
 
 							<br><br><br>
-   	                        <form id="userRegister">
+   	                        <form id="consumptionRegister">
    	                        <h2>Edit Consumption...</h2>
 							<input type= "hidden" id="edit_id" name="edit_id">
 	                            
@@ -190,7 +190,7 @@ div {
 
     $(document).ready(function () {
 
-        $("#userRegister").validate({
+        $("#consumptionRegister").validate({
             rules: {
             	id: "required",
             	meter_box_id: "required",
@@ -239,7 +239,7 @@ div {
                     	if(data['success']=="Done"){
                     		alert("Edit Successfull!");
                         	document.getElementById("hideDiv").style.display = "none";
-                            $("#userRegister")[0].reset();
+                            $("#consumptionRegister")[0].reset();
     						reload();
     					}else{
     						alert("Unsuccessful!");
@@ -252,7 +252,7 @@ div {
             }
         });
 
-        $("#userRegister").submit(function(e) {
+        $("#consumptionRegister").submit(function(e) {
             e.preventDefault();
         });
 
